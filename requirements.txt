@@ -1,0 +1,24 @@
+# --- Core Computer Vision ---
+opencv-python>=4.8.0
+numpy>=1.26.0
+pillow>=10.0.0
+
+# --- Detection / Tracking ---
+ultralytics>=8.2.0
+scikit-image>=0.22.0
+filterpy>=1.4.5   # for Kalman filters if used in tracker
+tqdm>=4.65.0
+
+# --- OCR ---
+pytesseract>=0.3.10
+
+# --- Optional utils ---
+matplotlib>=3.8.0
+imutils>=0.5.4
+
+# --- Deep learning base ---
+torch>=2.2.0
+torchvision>=0.17.0
+
+# --- If you use pandas/logging for results ---
+pandas>=2.2.0
