@@ -24,6 +24,7 @@ This project is designed to simulate an **intelligent traffic monitoring system*
 ---
 
 ## 📂 Project Structure
+```
 traffic-monitor/
 │
 ├── main.py # main pipeline for detection, tracking & speed estimation
@@ -33,6 +34,7 @@ traffic-monitor/
 │
 ├── requirements.txt # all dependencies
 └── README.md # this file
+```
 
 
 ## 🚀 Features
