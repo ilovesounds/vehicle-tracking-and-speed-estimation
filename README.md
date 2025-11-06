@@ -54,4 +54,50 @@ traffic-monitor/
 ```bash
 git clone https://github.com/yourusername/vehicle-tracking-and-speed-estimation.git
 cd vehicle-tracking-and-speed-estimation
+```
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### Verify YOLO Installation
+``` bash
+from ultralytics import YOLO
+model = YOLO("yolov8n.pt")
+```
+## 🎥 Usage
+### Run the main script
+```bash
+python main.py
+```
+### Adjust the main video
+```bash
+main("sample.mp4")
+```
+Replace "sample.mp4" with your own file path.
+
+## ⚡ Performance Tips
+
+If your video runs slower than expected, try the following optimizations:
+
+### 🧩 1. Resize the video frames
+High-resolution videos (e.g., 4K or 1080p) slow down YOLO and OpenCV.  
+Resize frames before processing:
+```python
+frame = cv2.resize(frame, (1280, 720))
+```
+### ⚙️ 2. Skip frames (process every few frames)
+You don’t need to analyze every single frame to maintain smooth tracking:
+```python
+frame_count = 0
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+    frame_count += 1
+    if frame_count % 3 != 0:
+        continue  # Skip 2 out of every 3 frames
+```
+This improves performance up to 3× while keeping accuracy acceptable.
+
+
 
