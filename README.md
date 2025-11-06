@@ -24,4 +24,32 @@ This project is designed to simulate an **intelligent traffic monitoring system*
 ---
 
 ## 📂 Project Structure
+traffic-monitor/
+│
+├── main.py # main pipeline for detection, tracking & speed estimation
+├── detector.py # handles YOLO-based vehicle detection
+├── tracker.py # custom tracker for object ID management
+├── speed_estimator.py # calculates pixel/frame speed
+│
+├── requirements.txt # all dependencies
+└── README.md # this file
+
+
+## 🚀 Features
+
+✅ **Vehicle Detection** using YOLOv8  
+✅ **Object Tracking** with persistent IDs  
+✅ **Speed Estimation** in km/h  
+✅ **Region of Interest (ROI)** overlay for clarity  
+✅ **Optimized for 720p** video performance  
+✅ **Lightweight and Modular Design**
+
+---
+
+## 🧩 Installation
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/yourusername/vehicle-tracking-and-speed-estimation.git
+cd vehicle-tracking-and-speed-estimation
 
